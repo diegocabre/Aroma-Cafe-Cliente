@@ -1,0 +1,71 @@
+/* Footer.css */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 20px;
+}
+
+.contacto {
+  order: 2;
+}
+
+.redes {
+  order: 1;
+}
+
+.redes i {
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.redes i:hover {
+  text-decoration: underline;
+}
+
+.direccion {
+  order: 3;
+}
+
+.direccion p {
+  color: white;
+}
+
+.direccion p:hover {
+  text-decoration: underline;
+}
+
+.boton {
+  background-color: white;
+  font-size: 24px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #f7da18; 
+}
+
+.boton:active {
+  background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .contacto,
+  .redes,
+  .direccion {
+    margin-bottom: 20px;
+  }
+
+  .boton {
+    width: 100%;
+  }
+}

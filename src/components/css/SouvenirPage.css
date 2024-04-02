@@ -1,0 +1,8 @@
+.souvenir-page {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: blanchedalmond;
+  padding: 10px;
+  gap: 20px;
+}

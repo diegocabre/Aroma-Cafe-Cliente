@@ -1,0 +1,29 @@
+.home {
+    height: 100vh;
+    background-color: #f7da18;
+    display: flex;
+}
+
+.home div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home h1 {
+    font-size: 100px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Bebas Neue', cursive;
+    color: #ffffff;
+}
+
+.granos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

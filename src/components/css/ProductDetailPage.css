@@ -1,0 +1,25 @@
+.back-button {
+  margin-bottom: 20px;
+}
+
+.back-button .btn {
+  background-color: #ad960b;
+  border-color: #ad960b;
+  color: #140f07;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.back-button .btn:hover {
+  background-color: #695900;
+  border-color: #695900;
+}
+
+.souvenir-image {
+  width: 200px; 
+  height: auto;
+
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+}

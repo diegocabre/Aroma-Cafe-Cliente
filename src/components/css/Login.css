@@ -1,0 +1,49 @@
+/* Agrega estilos para el formulario */
+.form-container {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los elementos del formulario */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Estilos para los botones */
+.btn-primary {
+  background-color: #ad960b;
+  border: none;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #f7da18;
+}
+
+/* Estilos para los enlaces */
+p a {
+  color: #ad960b;
+}
+
+p a:hover {
+  color: #f7da18;
+}
+
+/* Media queries para pantallas grandes y medianas */
+@media (min-width: 992px) {
+  /* Pantallas LG */
+  .form-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Pantallas MD y más pequeñas */
+  .form-container {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
