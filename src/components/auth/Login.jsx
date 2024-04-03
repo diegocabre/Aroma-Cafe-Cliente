@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { Navigate } from "react-router-dom"; // Importa Navigate
 import "../css/Login.css";
 import config from "../../config/config";
 
@@ -9,6 +10,7 @@ function Login() {
     email: "",
     password: "",
   });
+  const [loginMessage, setLoginMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,12 +36,15 @@ function Login() {
 
       if (data.token) {
         localStorage.setItem("token", data.token);
-        window.location.href = "/src/views/private/Client.jsx";
+        setLoginMessage("¡Inicio de sesión exitoso!");
+        setTimeout(() => {
+          setLoginMessage("");
+          // Redirige a la ruta deseada utilizando Navigate
+          return <Navigate to="/client" />;
+        }, 2000);
+      } else {
+        setLoginMessage("Credenciales incorrectas");
       }
-
-      console.log(data);
-    } catch (error) {
-      console.error(error);
     } finally {
       setValidated({
         email: "",
@@ -51,6 +56,7 @@ function Login() {
   return (
     <div className="form-container">
       <h1>Inicia Sesión</h1>
+      {loginMessage && <p>{loginMessage}</p>}
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Correo Electrónico</Form.Label>
@@ -77,10 +83,11 @@ function Login() {
           Inicia Sesión
         </Button>
         <p>
-          No tienes cuenta? <a href="/register">Registrate</a>
+          ¿No tienes cuenta? <a href="/register">Regístrate</a>
         </p>
       </Form>
     </div>
   );
 }
+
 export default Login;

@@ -10,7 +10,7 @@ function Register() {
     lastName: "",
     email: "",
     password: "",
-    confirmPassword: "",
+    passwordConfir: "",
   });
 
   const handleChange = (e) => {
@@ -34,16 +34,16 @@ function Register() {
       });
 
       const data = await response.json();
-      console.log(data);
+      alert(data);
     } catch (error) {
-      console.error(error);
+      alert.error(error);
     } finally {
       setValidated({
         name: "",
         lastName: "",
         email: "",
         password: "",
-        confirmPassword: "",
+        passwordConfir: "",
       });
     }
   };
@@ -96,10 +96,10 @@ function Register() {
           <Form.Label>Confirmar Contraseña</Form.Label>
           <Form.Control
             type="password"
-            name="confirmPassword"
+            name="passwordConfir"
             placeholder="tu Contraseña de nuevo"
             onChange={handleChange}
-            value={validated.confirmPassword}
+            value={validated.passwordConfir}
           />
         </Form.Group>
         <Button variant="primary" type="submit">
