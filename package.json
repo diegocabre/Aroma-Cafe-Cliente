@@ -12,9 +12,10 @@
     "preview": "vite preview"
   },
   "render": {
-    "builcomand": "npm run build",
-    "startcommand": "npm run dev",
-    "port": 3000
+    "buildCommand": "npm run build", 
+    "startCommand": "npm start",
+    "useDocker": false,
+    "src": "./src"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
