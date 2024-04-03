@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "../css/Login.css";
+import config from "../../config/config";
 
 function Login() {
   const [validated, setValidated] = useState({
@@ -22,7 +23,7 @@ function Login() {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/login", {
+      const response = await fetch(`${config.apiUrl}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -30,6 +31,12 @@ function Login() {
         body: JSON.stringify(validated),
       });
       const data = await response.json();
+
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+        window.location.href = "/src/views/private/Client.jsx";
+      }
+
       console.log(data);
     } catch (error) {
       console.error(error);

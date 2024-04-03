@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "../css/Register.css";
+import config from "../../config/config";
 
 function Register() {
   const [validated, setValidated] = useState({
@@ -24,7 +25,7 @@ function Register() {
       event.stopPropagation();
     }
     try {
-      const response = await fetch("http://localhost:3000/registro", {
+      const response = await fetch(config.apiUrl + "/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
