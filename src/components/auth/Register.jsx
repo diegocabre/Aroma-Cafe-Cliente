@@ -25,7 +25,7 @@ function Register() {
       event.stopPropagation();
     }
     try {
-      const response = await fetch(config.apiUrl + "/register", {
+      const response = await fetch(config.apiUrl + "/registro", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
