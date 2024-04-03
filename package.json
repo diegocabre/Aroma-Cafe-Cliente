@@ -15,7 +15,8 @@
     "buildCommand": "npm run build", 
     "startCommand": "npm start", 
     "useDocker": false,
-    "src": "./src"
+    "src": "./src",
+    "port": 3000
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
