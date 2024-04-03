@@ -5,9 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "npm run dev",
+    "deploy": "render deploy",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
+  },
+  "render": {
+    "builcomand": "npm run build",
+    "startcommand": "npm run dev",
+    "port": 3000
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
