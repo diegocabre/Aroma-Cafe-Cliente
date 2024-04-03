@@ -5,15 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "vite build && node src/server.js", // Comando para iniciar tu servidor en producción
+    "start": "vite build && node src/server.js", 
     "deploy": "render deploy",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "render": {
-    "buildCommand": "npm run build", // Comando para construir tu aplicación
-    "startCommand": "npm start", // Comando para iniciar tu servidor
+    "buildCommand": "npm run build", 
+    "startCommand": "npm start", 
     "useDocker": false,
     "src": "./src"
   },
