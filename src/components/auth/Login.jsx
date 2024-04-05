@@ -39,8 +39,7 @@ function Login() {
         setLoginMessage("¡Inicio de sesión exitoso!");
         setTimeout(() => {
           setLoginMessage("");
-          // Redirige a la ruta deseada utilizando Navigate
-          return <Navigate to="/client" />;
+          return <Navigate to="../private/Client.jsx" />;
         }, 2000);
       } else {
         setLoginMessage("Credenciales incorrectas");
