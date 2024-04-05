@@ -106,7 +106,8 @@ function Register() {
           Registrate
         </Button>
         <p>
-          ya tienes una cuenta? <a href="/login">Inicia Sesión</a>
+          ya tienes una cuenta?{" "}
+          <a href={config.apiUrl + "/registro"}>Inicia Sesión</a>
         </p>
       </Form>
     </div>
