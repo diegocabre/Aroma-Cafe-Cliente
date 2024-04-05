@@ -2,12 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../css/Header.css";
-import logo from "../imgs/logo.png";
+import logo from "../../../public/imgs/logo.png";
 import { NavDropdown } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useCart } from "../context/CartContext";
-import config from "../../config/config";
+
 
 const Header = () => {
   const { cart } = useCart();

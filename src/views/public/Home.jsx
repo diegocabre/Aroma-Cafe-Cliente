@@ -1,6 +1,6 @@
 import React from "react";
 import "../../components/css/Home.css";
-import granos from "../../components/imgs/granos.png";
+import granos from "../../../public/imgs/granos.png";
 import Carousel from "../../components/common/Carousel";
 import History from "./History";
 export default function Home() {

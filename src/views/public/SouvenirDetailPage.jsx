@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import productsData from "../../components/imgs/productos.json";
+import productsData from "../../../public/productos.json";
 import SouvenirCard from "../../components/common/SouvenirCard";
 import "../../components/css/ProductDetailPage.css";
 

@@ -2,7 +2,7 @@
    {
       "id": 1,
       "name": "Cafe Brasil",
-      "image": "/src/components/imgs/brasil.png",
+      "image": "/public/imgs/brasil.png",
       "price": 10.99,
       "description": "Cafe hecho en Brasil",
       "category": "Cafe",
@@ -12,7 +12,7 @@
    {
       "id": 2,
       "name": "Cafe Frances",
-      "image": "/src/components/imgs/frances.jpg",
+      "image": "/public/imgs/frances.jpg",
       "price": 19.99,
       "description": "Cafe hecho en Francia",
       "category": "Cafe",
@@ -22,7 +22,7 @@
    {
       "id": 3,
       "name": "Cafe Etiopia",
-      "image": "/src/components/imgs/etiopia.png",
+      "image": "/public/imgs/etiopia.png",
       "price": 9.99,
       "description": "Cafe hecho en Etiopia",
       "category": "Cafe",
@@ -32,7 +32,7 @@
    {
       "id": 4,
       "name": "Cafe Etiopia 2",
-      "image": "/src/components/imgs/etiopia2.jpg",
+      "image": "/public/imgs/etiopia2.jpg",
       "price": 9.99,
       "description": "Cafe hecho en Etiopia con otro sabor",
       "category": "Cafe",
@@ -42,7 +42,7 @@
    {
       "id": 5,
       "name": "Cafe Jungle",
-      "image": "/src/components/imgs/jungle.png",
+      "image": "/public/imgs/jungle.png",
       "price": 5.99,
       "description": "Café de la montaña",
       "category": "Cafe",
@@ -52,7 +52,7 @@
    {
       "id": 6,
       "name": "Cafe Tanzanian",
-      "image": "/src/components/imgs/Tanzanian.jpg",
+      "image": "/public/imgs/Tanzanian.jpg",
       "price": 7.99,
       "description": "Cafe hecho en Tanzanian",
       "category": "Cafe",
@@ -62,7 +62,7 @@
    {
       "id": 7,
       "name": "Cafe Africa",
-      "image": "/src/components/imgs/Volcanica.jpg",
+      "image": "/public/imgs/Volcanica.jpg",
       "price": 9.99,
       "description": "Cafe hecho en Africa",
       "category": "Cafe",
@@ -72,7 +72,7 @@
    {
       "id": 8,
       "name": "Café de la muerte",
-      "image": "/src/components/imgs/muerte.jpg",
+      "image": "/public/imgs/muerte.jpg",
       "price": 9.99,
       "description": "Cafe de la muerte",
       "category": "Cafe",
@@ -82,7 +82,7 @@
    {
       "id": 9,
       "name": "Cafetera Turca",
-      "image": "/src/components/imgs/souvenir/cafeteras-turcas-1-768x644.jpg",
+      "image": "/public/imgs/souvenir/cafeteras-turcas-1-768x644.jpg",
       "price": 100,
       "description": "Cafetera Turca",
       "category": "Cafetera",
@@ -92,7 +92,7 @@
    {
       "id": 10,
       "name": "Cafetera Amarilla",
-      "image": "/src/components/imgs/souvenir/Cafetera amarilla expreso.jpg",
+      "image": "/public/imgs/souvenir/Cafetera amarilla expreso.jpg",
       "price": 90,
       "description": "Cafetera Amarilla",
       "category": "Cafetera",
@@ -102,7 +102,7 @@
    {
       "id": 11,
       "name": "Cafetera Goteo Roja",
-      "image": "src/components/imgs/souvenir/Cafetera goteo roja.jpg",
+      "image": "/public/imgs/souvenir/Cafetera goteo roja.jpg",
       "price": 100,
       "description": "Cafetera Roja por goteo",
       "category": "Cafetera",
@@ -112,7 +112,7 @@
    {
       "id": 12,
       "name": "Cafetera Moka",
-      "image": "/src/components/imgs/souvenir/cafetera-moka.jpg",
+      "image": "/public/imgs/souvenir/cafetera-moka.jpg",
       "price": 200,
       "description": "Cafetera Moka",
       "category": "Cafetera",
@@ -122,7 +122,7 @@
    {
       "id": 13,
       "name": "Cafetera Expresso 6 tazas",
-      "image": "/src/components/imgs/souvenir/cafetera-express-6-tazas.jpg",
+      "image": "/public/imgs/souvenir/cafetera-express-6-tazas.jpg",
       "price": 150,
       "description": "Cafetera Expresso para 6 tazas",
       "category": "Cafetera",
@@ -132,7 +132,7 @@
    {
       "id": 14,
       "name": "Cafetera Tradicional",
-      "image": "/src/components/imgs/souvenir/cafetera.jpg",
+      "image": "/public/imgs/souvenir/cafetera.jpg",
       "price": 80,
       "description": "Cafetera Tradicional",
       "category": "Cafetera",
@@ -142,7 +142,7 @@
    {
       "id": 15,
       "name": "Cafetera Profesional",
-      "image": "/src/components/imgs/souvenir/cafeteras-que-utilizan-los-profesionales-1024x1024.jpg",
+      "image": "/public/imgs/souvenir/cafeteras-que-utilizan-los-profesionales-1024x1024.jpg",
       "price": 250,
       "description": "Cafetera con filtro profesional",
       "category": "Cafetera",
@@ -152,7 +152,7 @@
    {
       "id": 16,
       "name": "Set de Regalo",
-      "image": "/src/components/imgs/souvenir/GORRA_JPG-2.jpg",
+      "image": "/public/imgs/souvenir/GORRA_JPG-2.jpg",
       "price": 60,
       "description": "Set de regalo que incluye mochila y gorra",
       "category": "Regalo",
@@ -162,7 +162,7 @@
    {
       "id": 17,
       "name": "Sombrilla",
-      "image": "/src/components/imgs/souvenir/SOMBRILLA_JPG-5.jpg",
+      "image": "/public/imgs/souvenir/SOMBRILLA_JPG-5.jpg",
       "price": 20,
       "description": "Sombrilla",
       "category": "Regalo",
@@ -172,7 +172,7 @@
    {
       "id": 18,
       "name": "Gift Card",
-      "image": "/src/components/imgs/souvenir/tarjetaregalo.png",
+      "image": "/public/imgs/souvenir/tarjetaregalo.png",
       "price": 10,
       "description": "Gift Card",
       "category": "Regalo",

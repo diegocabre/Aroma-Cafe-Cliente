@@ -11,6 +11,7 @@ function Login() {
     password: "",
   });
   const [loginMessage, setLoginMessage] = useState("");
+  const [redirect, setRedirect] = useState(false); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,7 +40,7 @@ function Login() {
         setLoginMessage("¡Inicio de sesión exitoso!");
         setTimeout(() => {
           setLoginMessage("");
-          return <Navigate to="../private/Client.jsx" />;
+          setRedirect(true); // Establecer el estado para redirigir
         }, 2000);
       } else {
         setLoginMessage("Credenciales incorrectas");
@@ -88,6 +89,8 @@ function Login() {
           </NavLink>
         </p>
       </Form>
+      {redirect && <Navigate to="/client" />}{" "}
+      {/* Redirección después del inicio de sesión */}
     </div>
   );
 }

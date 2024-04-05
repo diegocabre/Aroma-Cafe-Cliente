@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types"; // Importa PropTypes
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import productsData from "../imgs/productos.json";
+import productsData from "../../../public/productos.json";
 import { Card, Button, Form } from "react-bootstrap";
 import { useCart } from "../context/CartContext";
 import "../css/ProductCard.css";
