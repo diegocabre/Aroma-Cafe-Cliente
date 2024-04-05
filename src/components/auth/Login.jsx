@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { Navigate } from "react-router-dom"; // Importa Navigate
+import { Navigate } from "react-router-dom";
 import "../css/Login.css";
 import config from "../../config/config";
 
@@ -25,7 +25,7 @@ function Login() {
     }
 
     try {
-      const response = await fetch(`${config.apiUrl}/login`, {
+      const response = await fetch(config.apiUrl + "/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
