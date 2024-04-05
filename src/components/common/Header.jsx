@@ -8,7 +8,6 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useCart } from "../context/CartContext";
 
-
 const Header = () => {
   const { cart } = useCart();
   const [scroll, setScroll] = useState(false);
@@ -40,11 +39,15 @@ const Header = () => {
               title="SHOP"
               id="basic-nav-dropdown"
             >
-              <NavDropdown.Item href="/souvenirs">
-                <p className="dropdown-item">Regalos</p>
+              <NavDropdown.Item>
+                <NavLink to="/souvenirs">
+                  <p className="dropdown-item">Regalos</p>
+                </NavLink>
               </NavDropdown.Item>
-              <NavDropdown.Item href="/products/">
-                <p className="dropdown-item">Productos</p>
+              <NavDropdown.Item>
+                <NavLink to="/products">
+                  <p className="dropdown-item">Productos</p>
+                </NavLink>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
