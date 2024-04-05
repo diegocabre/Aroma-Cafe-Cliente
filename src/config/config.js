@@ -1,6 +1,6 @@
 // src/config.js
 const config = {
-    apiUrl: "https://aroma-cafe-servidor.onrender.com",
+    apiUrl: "http://localhost:3000",
   };
   
   export default config;

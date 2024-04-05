@@ -5,15 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "vite build", 
+    "start": "vite build",
     "deploy": "render deploy",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "render": {
-    "buildCommand": "npm run build", 
-    "startCommand": "npm start", 
+    "buildCommand": "npm run build",
+    "startCommand": "npm start",
     "useDocker": false,
     "src": "./src",
     "port": 3000
@@ -37,5 +37,3 @@
     "vite": "^4.4.5"
   }
 }
-
-

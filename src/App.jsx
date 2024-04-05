@@ -14,9 +14,9 @@ import RegisterPage from "./views/public/RegisterPage";
 import { ProductProvider } from "./components/context/ProductContext";
 import { CartProvider } from "./components/context/CartContext";
 import Checkout from "./views/public/Checkout";
-/* import Administrator from "./views/private/Adminitrator";
+import Administrator from "./views/private/Adminitrator";
 import CartClient from "./views/private/CartClient";
-import Client from "./views/private/Client"; */
+import Client from "./views/private/Client";
 
 const App = () => {
   return (
@@ -29,6 +29,9 @@ const App = () => {
               <Route exact path="/" element={<Home />} />
               <Route exact path="/products" element={<Products />} />
               <Route exact path="/souvenirs" element={<SouvenirPage />} />
+              <Route exact path="/admin" element={<Administrator />} />
+              <Route exact path="/client" element={<Client />} />
+              <Route exact path="/client/cart" element={<CartClient />} />
               <Route
                 exact
                 path="/products/:id"
