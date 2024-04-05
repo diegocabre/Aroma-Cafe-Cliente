@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import ProductCard from "../../components/common/ProductCard";
-import productsData from "../../../public/productos.json";
+import productsData from "../../productos.json";
 import "../../components/css/Products.css";
 
 const Products = () => {

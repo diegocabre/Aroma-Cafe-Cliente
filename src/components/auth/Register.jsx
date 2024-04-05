@@ -13,6 +13,7 @@ function Register() {
     password: "",
     passwordConfir: "",
   });
+  const [registrationMessage, setRegistrationMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,9 +36,9 @@ function Register() {
       });
 
       const data = await response.json();
-      alert(data);
+      setRegistrationMessage(data.message); // Establece el mensaje de registro exitoso
     } catch (error) {
-      alert.error(error);
+      console.error("Error:", error);
     } finally {
       setValidated({
         name: "",
@@ -52,6 +53,8 @@ function Register() {
   return (
     <div className="form-container">
       <h1>Registrate</h1>
+      {registrationMessage && <p>{registrationMessage}</p>}{" "}
+      {/* Muestra el mensaje de registro exitoso */}
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Nombre</Form.Label>
@@ -107,7 +110,7 @@ function Register() {
           Registrate
         </Button>
         <p>
-          ya tienes una cuenta?{" "}
+          ¿Ya tienes una cuenta?{" "}
           <NavLink to="/login">
             <p>Inicia Sesión</p>
           </NavLink>

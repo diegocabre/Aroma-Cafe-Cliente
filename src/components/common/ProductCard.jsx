@@ -1,8 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types"; // Importa PropTypes
+import PropTypes from "prop-types";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import productsData from "../../../public/productos.json";
+import { NavLink } from "react-router-dom";
+import productsData from "../../productos.json";
 import { Card, Button, Form } from "react-bootstrap";
 import { useCart } from "../context/CartContext";
 import "../css/ProductCard.css";
@@ -32,13 +32,14 @@ const ProductCard = ({ productId }) => {
   if (product.category === "Cafe") {
     return (
       <Card className="product-card d-flex flex-column h-100" key={product.id}>
-        <Link to={`/products/${product.id}`}>
+        {/* Reemplaza Link con NavLink */}
+        <NavLink to={`/products/${product.id}`}>
           <Card.Img
             className="product-image"
             variant="top"
             src={product.image}
           />
-        </Link>
+        </NavLink>
         <Card.Body>
           <Card.Title className="product-title">{product.name}</Card.Title>
           <Card.Text>{product.description}</Card.Text>
@@ -78,10 +79,10 @@ const ProductCard = ({ productId }) => {
   }
 };
 
-// Define las PropTypes para el componente
 ProductCard.propTypes = {
-  productId: PropTypes.string.isRequired // Ajusta el tipo según tu necesidad
+  productId: PropTypes.string.isRequired,
 };
 
 export default ProductCard;
+
 

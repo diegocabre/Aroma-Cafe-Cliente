@@ -1,6 +1,6 @@
 // ProductContext.js
 import React, { createContext, useState } from "react";
-import productsData from "../../../public/productos.json";
+import productsData from "../../productos.json";
 
 const ProductContext = createContext();
 

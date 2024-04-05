@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import SouvenirCard from "../../components/common/SouvenirCard";
-import productsData from "../../../public/productos.json";
+import productsData from "../../productos.json";
 import "../../components/css/SouvenirPage.css";
 
 const SouvenirPage = () => {

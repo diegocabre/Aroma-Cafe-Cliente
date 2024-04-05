@@ -1,8 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types"; // Importa PropTypes
+import PropTypes from "prop-types";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import productsData from "../../../public/productos.json";
+import { NavLink } from "react-router-dom";
+import productsData from "../../productos.json";
 import { Card, Button, Form } from "react-bootstrap";
 import { useCart } from "../context/CartContext";
 import "../css/ProductCard.css";
@@ -31,9 +31,9 @@ const SouvenirCard = ({ productId }) => {
 
   return (
     <Card className="product-card d-flex flex-column h-100" key={product.id}>
-      <Link to={`/souvenirs/${product.id}`} className="product-card-link">
+      <NavLink to={`/souvenirs/${product.id}`} className="product-card-link">
         <Card.Img className="product-image" variant="top" src={product.image} />
-      </Link>
+      </NavLink>
       <Card.Body>
         <Card.Title className="product-title">{product.name}</Card.Title>
         <Card.Text className="product-price">${product.price}</Card.Text>
@@ -65,9 +65,8 @@ const SouvenirCard = ({ productId }) => {
   );
 };
 
-// Define las PropTypes para el componente
 SouvenirCard.propTypes = {
-  productId: PropTypes.string.isRequired, // Asegúrate de ajustar el tipo según tu necesidad
+  productId: PropTypes.string.isRequired,
 };
 
 export default SouvenirCard;

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Carousel, Row, Col, Button } from "react-bootstrap";
-import productData from "../../../public/productos.json";
+import productData from "../../productos.json";
 import "../css/Carousel.css";
 
 function DarkVariantExample() {
