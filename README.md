@@ -8,7 +8,7 @@ Colores utilizados:
 
 font-family: 'Bebas Neue', cursive;
 
-Aroma de Café
+Aroma de Cafe
 Descripción
 Aroma de Café es una aplicación web para la venta de productos relacionados con el café. Este repositorio contiene el código fuente del frontend de la aplicación.
 
