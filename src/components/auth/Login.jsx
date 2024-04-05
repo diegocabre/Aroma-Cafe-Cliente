@@ -83,7 +83,7 @@ function Login() {
         </Button>
         <p>
           ¿No tienes cuenta?{" "}
-          <a href={config.apiUrl + "/registro"}>Regístrate</a>
+          <a href={config.apiUrl + "/register"}>Regístrate</a>
         </p>
       </Form>
     </div>
