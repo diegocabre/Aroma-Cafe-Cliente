@@ -82,7 +82,8 @@ function Login() {
           Inicia Sesión
         </Button>
         <p>
-          ¿No tienes cuenta? <a href="/register">Regístrate</a>
+          ¿No tienes cuenta?{" "}
+          <a href={config.apiUrl + "/registro"}>Regístrate</a>
         </p>
       </Form>
     </div>
