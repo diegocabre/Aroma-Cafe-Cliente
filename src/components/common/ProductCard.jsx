@@ -80,7 +80,8 @@ const ProductCard = ({ productId }) => {
 
 // Define las PropTypes para el componente
 ProductCard.propTypes = {
-  productId: PropTypes.string.isRequired, // Ajusta el tipo según tu necesidad
+  productId: PropTypes.string.isRequired // Ajusta el tipo según tu necesidad
 };
 
 export default ProductCard;
+
