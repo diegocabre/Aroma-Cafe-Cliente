@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"; // Importa PropTypes
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import productsData from "../imgs/productos.json";
@@ -39,9 +40,7 @@ const SouvenirCard = ({ productId }) => {
         <Card.Text className="product-category">
           Categoría: {product.category}
         </Card.Text>
-        <Card.Text className="product-brand">
-          Marca: {product.brand}
-        </Card.Text>
+        <Card.Text className="product-brand">Marca: {product.brand}</Card.Text>
         <Card.Text className="product-stock">
           Stock: {product.countInStock}
         </Card.Text>
@@ -58,15 +57,17 @@ const SouvenirCard = ({ productId }) => {
         </Form.Group>
       </Card.Body>
       <Card.Footer className="mt-auto">
-        <Button
-          className="btn-add-to-cart w-100"
-          onClick={handleAddToCart}
-        >
+        <Button className="btn-add-to-cart w-100" onClick={handleAddToCart}>
           Agregar al carrito
         </Button>
       </Card.Footer>
     </Card>
   );
+};
+
+// Define las PropTypes para el componente
+SouvenirCard.propTypes = {
+  productId: PropTypes.string.isRequired, // Asegúrate de ajustar el tipo según tu necesidad
 };
 
 export default SouvenirCard;

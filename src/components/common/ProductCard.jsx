@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"; // Importa PropTypes
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import productsData from "../imgs/productos.json";
@@ -75,6 +76,11 @@ const ProductCard = ({ productId }) => {
       </Card>
     );
   }
+};
+
+// Define las PropTypes para el componente
+ProductCard.propTypes = {
+  productId: PropTypes.string.isRequired, // Ajusta el tipo según tu necesidad
 };
 
 export default ProductCard;
