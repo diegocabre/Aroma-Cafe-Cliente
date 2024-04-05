@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { Navigate } from "react-router-dom";
+import { NavLink, Navigate } from "react-router-dom";
 import "../css/Login.css";
 import config from "../../config/config";
 
@@ -82,8 +82,7 @@ function Login() {
           Inicia Sesión
         </Button>
         <p>
-          ¿No tienes cuenta?{" "}
-          <a href={config.apiUrl + "/register"}>Regístrar</a>
+          ¿No tienes cuenta? <NavLink to="/register">Registrate</NavLink>
         </p>
       </Form>
     </div>

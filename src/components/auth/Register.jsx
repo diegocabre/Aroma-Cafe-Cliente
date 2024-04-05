@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "../css/Register.css";
 import config from "../../config/config";
+import { NavLink } from "react-router-dom";
 
 function Register() {
   const [validated, setValidated] = useState({
@@ -107,7 +108,7 @@ function Register() {
         </Button>
         <p>
           ya tienes una cuenta?{" "}
-          <a href={config.apiUrl + "/login"}>Login</a>
+          <NavLink to={config.apiUrl + "/login"}>Login</NavLink>
         </p>
       </Form>
     </div>
