@@ -107,7 +107,10 @@ function Register() {
           Registrate
         </Button>
         <p>
-          ya tienes una cuenta? <NavLink to="/login">Inicia Sesión</NavLink>
+          ya tienes una cuenta?{" "}
+          <NavLink to="/login">
+            <p>Inicia Sesión</p>
+          </NavLink>
         </p>
       </Form>
     </div>

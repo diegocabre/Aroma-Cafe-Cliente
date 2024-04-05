@@ -82,7 +82,10 @@ function Login() {
           Inicia Sesión
         </Button>
         <p>
-          ¿No tienes cuenta? <NavLink to="/register">Registrate</NavLink>
+          ¿No tienes cuenta?{" "}
+          <NavLink to="/register">
+            <p>Registrate</p>
+          </NavLink>
         </p>
       </Form>
     </div>
