@@ -1,6 +1,6 @@
 // src/config.js
 const config = {
-    apiUrl: "http://localhost:3000",
+    apiUrl: "https://server-cebr.onrender.com",
   };
   
   export default config;
