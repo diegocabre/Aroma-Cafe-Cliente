@@ -107,8 +107,7 @@ function Register() {
           Registrate
         </Button>
         <p>
-          ya tienes una cuenta?{" "}
-          <NavLink to={config.apiUrl + "/login"}>Login</NavLink>
+          ya tienes una cuenta? <NavLink to="/login">Inicia Sesión</NavLink>
         </p>
       </Form>
     </div>
