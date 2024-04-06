@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { NavLink, Navigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../css/Login.css";
 import config from "../../config/config";
 
@@ -11,7 +11,6 @@ function Login() {
     password: "",
   });
   const [loginMessage, setLoginMessage] = useState("");
-  const [redirect, setRedirect] = useState(false); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,7 +39,7 @@ function Login() {
         setLoginMessage("¡Inicio de sesión exitoso!");
         setTimeout(() => {
           setLoginMessage("");
-          setRedirect(true); // Establecer el estado para redirigir
+          window.location.href = "/client";
         }, 2000);
       } else {
         setLoginMessage("Credenciales incorrectas");
@@ -56,7 +55,11 @@ function Login() {
   return (
     <div className="form-container">
       <h1>Inicia Sesión</h1>
-      {loginMessage && <p>{loginMessage}</p>}
+      {loginMessage && (
+        <p className={loginMessage.includes("exitoso") ? "success" : "error"}>
+          {loginMessage}
+        </p>
+      )}
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Correo Electrónico</Form.Label>
@@ -89,8 +92,6 @@ function Login() {
           </NavLink>
         </p>
       </Form>
-      {redirect && <Navigate to="/client" />}{" "}
-      {/* Redirección después del inicio de sesión */}
     </div>
   );
 }
