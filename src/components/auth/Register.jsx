@@ -36,8 +36,13 @@ function Register() {
       });
 
       const data = await response.json();
-      setRegistrationMessage(data.message); // Establece el mensaje de registro exitoso
+      if (response.ok) {
+        alert(data.message);
+      } else {
+        throw new Error(data.message);
+      }
     } catch (error) {
+      alert("Error: " + error.message);
       console.error("Error:", error);
     } finally {
       setValidated({
@@ -53,8 +58,6 @@ function Register() {
   return (
     <div className="form-container">
       <h1>Registrate</h1>
-      {registrationMessage && <p>{registrationMessage}</p>}{" "}
-      {/* Muestra el mensaje de registro exitoso */}
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Nombre</Form.Label>
