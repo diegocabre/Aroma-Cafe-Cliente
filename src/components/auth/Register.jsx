@@ -13,7 +13,6 @@ function Register() {
     password: "",
     passwordConfir: "",
   });
-  const [registrationMessage, setRegistrationMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,12 +36,12 @@ function Register() {
 
       const data = await response.json();
       if (response.ok) {
-        alert(data.message);
+        alert(data.msg);
       } else {
-        throw new Error(data.message);
+        throw new Error(data.msg);
       }
     } catch (error) {
-      alert("Error: " + error.message);
+      alert("Error: " + error.msg);
       console.error("Error:", error);
     } finally {
       setValidated({
