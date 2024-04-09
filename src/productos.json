@@ -2,7 +2,7 @@
    {
       "id": 1,
       "name": "Cafe Brasil",
-      "image": "https://aroma-cafe-cliente.onrender.com/public/imgs/brasil.png",
+      "image": "public/imgs/brasil.png",
       "price": 10.99,
       "description": "Cafe hecho en Brasil",
       "category": "Cafe",
@@ -12,7 +12,7 @@
    {
       "id": 2,
       "name": "Cafe Frances",
-      "image": "https://aroma-cafe-cliente.onrender.com/public/imgs/frances.jpg",
+      "image": "public/imgs/frances.jpg",
       "price": 19.99,
       "description": "Cafe hecho en Francia",
       "category": "Cafe",
@@ -22,7 +22,7 @@
    {
       "id": 3,
       "name": "Cafe Etiopia",
-      "image": "../public/imgs/etiopia.png",
+      "image": "public/imgs/etiopia.png",
       "price": 9.99,
       "description": "Cafe hecho en Etiopia",
       "category": "Cafe",
