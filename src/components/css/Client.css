@@ -1,0 +1,39 @@
+/* ProductCard.css */
+
+.product-card {
+  /* Estilos para la tarjeta de producto */
+  font-family: "Bebas Neue", cursive;
+  border: 1px solid #ad960b;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.product-card .product-title {
+  color: #ad960b;
+  font-size: 24px;
+}
+
+.product-card .product-price {
+  color: #695900;
+}
+
+.product-card .product-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover; 
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-card .btn-add-to-cart {
+  background-color: #ad960b;
+  border-color: #ad960b;
+  color: #140f07;
+  font-weight: bold;
+}
+
+.product-card .btn-add-to-cart:hover {
+  background-color: #695900;
+  border-color: #695900;
+}

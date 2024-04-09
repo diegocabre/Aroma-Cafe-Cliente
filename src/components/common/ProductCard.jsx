@@ -32,7 +32,6 @@ const ProductCard = ({ productId }) => {
   if (product.category === "Cafe") {
     return (
       <Card className="product-card d-flex flex-column h-100" key={product.id}>
-        {/* Reemplaza Link con NavLink */}
         <NavLink to={`/products/${product.id}`}>
           <Card.Img
             className="product-image"
@@ -84,5 +83,3 @@ ProductCard.propTypes = {
 };
 
 export default ProductCard;
-
-
