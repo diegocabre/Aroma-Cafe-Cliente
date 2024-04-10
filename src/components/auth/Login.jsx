@@ -39,9 +39,7 @@ function Login() {
         setLoginMessage("¡Inicio de sesión exitoso!");
         setTimeout(() => {
           setLoginMessage("");
-          // Redirige al usuario a la página de cliente
-          window.history.pushState({}, null, "/client");
-          window.location.reload(); // Recarga la página para cargar la nueva ruta
+          navigate("/client"); // Redirige al usuario a la página de cliente
         }, 2000);
       } else {
         setLoginMessage("Credenciales incorrectas");
