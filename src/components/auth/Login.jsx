@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom"; // Importa useHistory
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { NavLink } from "react-router-dom";
@@ -7,7 +6,6 @@ import "../css/Login.css";
 import config from "../../config/config";
 
 function Login() {
-  const history = useHistory(); // Inicializa useHistory
   const [validated, setValidated] = useState({
     email: "",
     password: "",
@@ -41,7 +39,9 @@ function Login() {
         setLoginMessage("¡Inicio de sesión exitoso!");
         setTimeout(() => {
           setLoginMessage("");
-          history.push("/client"); // Usa history.push para redirigir
+          // Redirige al usuario a la página de cliente
+          window.history.pushState({}, null, "/client");
+          window.location.reload(); // Recarga la página para cargar la nueva ruta
         }, 2000);
       } else {
         setLoginMessage("Credenciales incorrectas");
