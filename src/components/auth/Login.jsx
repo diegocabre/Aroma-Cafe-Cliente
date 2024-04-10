@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom"; // Importa useNavigate
 import "../css/Login.css";
 import config from "../../config/config";
 
 function Login() {
+  const navigate = useNavigate(); // Inicializa useNavigate
   const [validated, setValidated] = useState({
     email: "",
     password: "",
