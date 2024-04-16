@@ -45,8 +45,10 @@ function Login() {
           setLoginMessage("Credenciales incorrectas");
         }
       } else {
+        const errorMessage = await response.text(); // Recupera el mensaje de error del servidor si está disponible
         setLoginMessage(
-          "Error en el servidor. Por favor, intenta nuevamente más tarde."
+          errorMessage ||
+            "Error en el servidor. Por favor, intenta nuevamente más tarde."
         );
       }
     } catch (error) {
@@ -78,6 +80,7 @@ function Login() {
             placeholder="Correo Electrónico"
             onChange={handleChange}
             value={validated.email}
+            required // Agrega validación HTML5
           />
         </Form.Group>
 
@@ -89,6 +92,7 @@ function Login() {
             placeholder="Contraseña"
             onChange={handleChange}
             value={validated.password}
+            required // Agrega validación HTML5
           />
         </Form.Group>
         <Button variant="primary" type="submit">
