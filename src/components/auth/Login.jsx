@@ -21,9 +21,6 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.stopPropagation();
-    }
 
     try {
       const response = await fetch(config.apiUrl + "/login", {
@@ -33,23 +30,34 @@ function Login() {
         },
         body: JSON.stringify(validated),
       });
-      const data = await response.json();
 
-      if (data.token) {
-        localStorage.setItem("token", data.token);
-        setLoginMessage("¡Inicio de sesión exitoso!");
-        setTimeout(() => {
-          setLoginMessage("");
-          navigate("/private"); // Redirige al usuario a la página privada
-        }, 2000);
+      if (response.ok) {
+        const data = await response.json();
+
+        if (data.token) {
+          localStorage.setItem("token", data.token);
+          setLoginMessage("¡Inicio de sesión exitoso!");
+          setTimeout(() => {
+            setLoginMessage("");
+            navigate("/private"); // Redirige al usuario a la página privada
+          }, 2000);
+        } else {
+          setLoginMessage("Credenciales incorrectas");
+        }
       } else {
-        setLoginMessage("Credenciales incorrectas");
+        setLoginMessage(
+          "Error en el servidor. Por favor, intenta nuevamente más tarde."
+        );
       }
-    } finally {
-      setValidated({
-        email: "",
-        password: "",
-      });
+    } catch (error) {
+      console.error("Error:", error);
+      setLoginMessage(
+        "Error en el servidor. Por favor, intenta nuevamente más tarde."
+      );
+    }
+
+    if (form.checkValidity() === false) {
+      event.stopPropagation();
     }
   };
 
