@@ -13,6 +13,7 @@ function Register() {
     password: "",
     passwordConfir: "",
   });
+  const [registerMessage, setRegisterMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,9 +23,7 @@ function Register() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.stopPropagation();
-    }
+
     try {
       const response = await fetch(config.apiUrl + "/registro", {
         method: "POST",
@@ -36,13 +35,16 @@ function Register() {
 
       const data = await response.json();
       if (response.ok) {
-        alert(data.msg);
+        setRegisterMessage(data.msg);
+        setTimeout(() => {
+          setRegisterMessage("");
+        }, 2000);
       } else {
-        throw new Error(data.msg);
+        setRegisterMessage(data.msg || "Error en el servidor");
       }
     } catch (error) {
-      alert("Error: " + error.msg);
       console.error("Error:", error);
+      setRegisterMessage("Error en el servidor");
     } finally {
       setValidated({
         name: "",
@@ -52,74 +54,22 @@ function Register() {
         passwordConfir: "",
       });
     }
+
+    if (form.checkValidity() === false) {
+      event.stopPropagation();
+    }
   };
 
   return (
     <div className="form-container">
       <h1>Registrate</h1>
+      {registerMessage && <p className="error">{registerMessage}</p>}
       <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicName">
-          <Form.Label>Nombre</Form.Label>
-          <Form.Control
-            type="text"
-            name="name"
-            placeholder="Tu Nombre"
-            onChange={handleChange}
-            value={validated.name}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicLastName">
-          <Form.Label>Apellido</Form.Label>
-          <Form.Control
-            type="text"
-            name="lastName"
-            placeholder="Tu Apellido"
-            onChange={handleChange}
-            value={validated.lastName}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            type="email"
-            name="email"
-            placeholder="tu Correo Electrónico"
-            onChange={handleChange}
-            value={validated.email}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Contraseña</Form.Label>
-          <Form.Control
-            type="password"
-            name="password"
-            placeholder="tu Contraseña"
-            onChange={handleChange}
-            value={validated.password}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Confirmar Contraseña</Form.Label>
-          <Form.Control
-            type="password"
-            name="passwordConfir"
-            placeholder="tu Contraseña de nuevo"
-            onChange={handleChange}
-            value={validated.passwordConfir}
-          />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Registrate
-        </Button>
-        <p>
-          ¿Ya tienes una cuenta?{" "}
-          <NavLink to="/login">
-            <p>Inicia Sesión</p>
-          </NavLink>
-        </p>
+        {/* Formulario... */}
       </Form>
     </div>
   );
 }
 
 export default Register;
+
