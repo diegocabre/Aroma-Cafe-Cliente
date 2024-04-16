@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { NavLink, useNavigate } from "react-router-dom"; // Importa useNavigate
+import { NavLink, useNavigate } from "react-router-dom";
 import "../css/Login.css";
 import config from "../../config/config";
 
 function Login() {
-  const navigate = useNavigate(); // Inicializa useNavigate
+  const navigate = useNavigate();
   const [validated, setValidated] = useState({
     email: "",
     password: "",
@@ -40,7 +40,7 @@ function Login() {
         setLoginMessage("¡Inicio de sesión exitoso!");
         setTimeout(() => {
           setLoginMessage("");
-          navigate("src/components/private/Client.jsx");
+          navigate("/private"); // Redirige al usuario a la página privada
         }, 2000);
       } else {
         setLoginMessage("Credenciales incorrectas");
@@ -89,7 +89,7 @@ function Login() {
         <p>
           ¿No tienes cuenta?{" "}
           <NavLink to="/register">
-            <p>Registrate</p>
+            <p>Regístrate</p>
           </NavLink>
         </p>
       </Form>
