@@ -44,12 +44,10 @@ function Login() {
         } else {
           setLoginMessage("Credenciales incorrectas");
         }
-      } else if (response.status === 409) {
-        setLoginMessage("Ya has iniciado sesión anteriormente");
       } else {
-        const errorMessage = await response.text();
+        const errorMessage = await response.json();
         setLoginMessage(
-          errorMessage ||
+          errorMessage.error ||
             "Error en el servidor. Por favor, intenta nuevamente más tarde."
         );
       }
