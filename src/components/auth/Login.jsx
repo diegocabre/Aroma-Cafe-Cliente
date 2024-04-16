@@ -40,7 +40,7 @@ function Login() {
         setLoginMessage("¡Inicio de sesión exitoso!");
         setTimeout(() => {
           setLoginMessage("");
-          navigate("/client"); // Redirige al usuario a la página de cliente
+          navigate("src/components/private/Client.jsx");
         }, 2000);
       } else {
         setLoginMessage("Credenciales incorrectas");
