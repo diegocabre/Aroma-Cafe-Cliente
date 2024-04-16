@@ -19,7 +19,7 @@ import RegisterPage from "./views/public/RegisterPage";
 import { ProductProvider } from "./components/context/ProductContext";
 import { CartProvider } from "./components/context/CartContext";
 import Checkout from "./views/public/Checkout";
-import Client from "./views/private/ClientPages";
+import Client from "./views/public/ClientPages";
 
 // Define el componente de la vista privada
 const PrivateView = () => {

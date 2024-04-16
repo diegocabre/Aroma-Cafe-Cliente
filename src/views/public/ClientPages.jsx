@@ -1,5 +1,5 @@
 import React from "react";
-import Client from "../../components/private/Client";
+import Client from "../../views/public/Client";
 
 const Cliente = () => {
   return (

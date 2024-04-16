@@ -2,7 +2,7 @@ import React from "react";
 import "../../components/css/Client.css"; // Asegúrate de importar los estilos necesarios
 import ProfilePicture from "../../../public/imgs/perfil.jpg"; // Importa la foto de perfil
 import { NavLink } from "react-router-dom"; // Importa NavLink para el enlace al carrito de compras
-import { useCart } from "../context/CartContext"; // Importa el contexto del carrito de compras
+import { useCart } from "../../components/context/CartContext"; // Importa el contexto del carrito de compras
 import ProductCard from "../../components/common/ProductCard";
 
 const Client = () => {
